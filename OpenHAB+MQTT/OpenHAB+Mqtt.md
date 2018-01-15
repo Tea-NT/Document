@@ -95,13 +95,14 @@ namespace _1212
 }
 
 ```
-生成运行程序之前先把两个项目中的```.vscode/launch.json```文件中的Console改成```"console":"integratedTerminal"```，否则程序会报错，说没有可以输入的设备，改成这个意思就是用内置的终端来当控制台的输入输出。
+生成运行程序之前先把两个项目中的```.vscode/launch.json```文件中的Console改成```"console":"integratedTerminal"```，否则程序会报错，说没有可以输入的设备，改成这个意思就是用内置的终端来当控制台的输入输出。  
 
-两个程序跑起来，就能在Emqtt的DashBoard控制台Clients页面能看到这两个控制端了，Topics页面能看到已经有人订阅的主题/qos1。
-![pub_sub_test](https://i.loli.net/2018/01/15/5a5c655bac97a.png)
+两个程序跑起来，就能在Emqtt的DashBoard控制台Clients页面能看到这两个控制端了，Topics页面能看到已经有人订阅的主题/qos1。  
+
+![pub_sub_test](https://i.loli.net/2018/01/15/5a5c655bac97a.png)  
 查看连接到emqtt的客户端有哪些
 
-![5、pub_sub_test_topic](https://i.loli.net/2018/01/15/5a5c66013ab0e.png)
+![5、pub_sub_test_topic](https://i.loli.net/2018/01/15/5a5c66013ab0e.png)  
 已有的主题
 
 然后在发布端的终端里输入想要发送的数据并回车，订阅端就能接收到数据了。
@@ -118,7 +119,7 @@ ESP8266芯片上MQTT客户端键参考资料4，获取方法也很简单。打�
 
 安装好后，在VSCode中打开ESP8266中MQTTClient的示例，
 
-![8、MQTTexp](https://i.loli.net/2018/01/15/5a5c72e0cce56.png)
+![8、MQTTexp](https://i.loli.net/2018/01/15/5a5c72e0cce56.png)  
 
 修改代码内容为：
 
@@ -184,7 +185,7 @@ void setup() {
 void loop() {
   mqtt.handle();
 }
-```
+```  
 
 然后通过刚刚上一步写的控制台应用就可以控制这个LED灯了。
 发送0，LED灯灭，发送1，LED亮。
@@ -194,11 +195,11 @@ void loop() {
 这里的OpenHAB配置基本上是对着参考资料2中的教程做的，但是那里面item和sitemap的**双引号**是中文格式的而不是英文的，弄的卡住了很久一直出不来。所以，一定要再三确认一下用的是英文的输入法。
 对着教程新建一个item和sitemap，来控制刚刚写在程序里的LED灯。
 这里又有神奇的事情了，可以直接在VSCode里安装openhab的插件，没错，[OpenHAB居然还在VSCode上开发了插件](https://marketplace.visualstudio.com/items?itemName=openhab.openhab)，真是神奇的一件事情，当然，这也是我折腾完后看OpenHAB的github主页才发现的。
-![openhab-sitemap](https://raw.githubusercontent.com/openhab/openhab-vscode/master/images/openhab-sitemap.gif)
+![openhab-sitemap](https://raw.githubusercontent.com/openhab/openhab-vscode/master/images/openhab-sitemap.gif)  
 可以直接在右边窗口预览新建的sitemap
 
-然后配置完后的演示效果如下：
-![demo](https://i.loli.net/2018/01/15/5a5c8130132c8.gif)
+然后配置完后的演示效果如下：  
+![demo](https://i.loli.net/2018/01/15/5a5c8130132c8.gif)  
 但是只能在本地网络中访问，后面我们继续配置成我们想要的远程访问。
 
 
@@ -219,8 +220,8 @@ Base URL填写```https://myopenhab.org/```当然如果不嫌麻烦自己架设�
 红框中要填的**UUID**和**Secret**分别在OpenHAB安装目录下的```openhab-2.2.0\userdata\uuid```和```openhab-2.2.0\userdata\openhabcloud\secret```文件中，用记事本打开复制并粘贴到这两个空格完成注册即可。
 
 至此，完成了远程控制开发板上的LED的目的。
-什么？折腾这么久就为了控制这个小灯泡？ (╯‵□′)╯︵┻━┻ 
-没错，灯泡都能控制了，其他东西还会远么？(ﾉ･ω･)ﾉﾞ
+什么？折腾这么久就为了控制这个小灯泡？ (╯‵□′)╯︵┻━┻   
+没错，灯泡都能控制了，其他东西还会远么？(ﾉ･ω･)ﾉﾞ  
 
 后续：
 发现OpenHAB直接有一个叫HABmin的UI。。。难道可以直接配置Item和Sitemap了？果断装上！
@@ -228,7 +229,7 @@ Base URL填写```https://myopenhab.org/```当然如果不嫌麻烦自己架设�
 结果等了一圈一圈又一圈后。。。
 
 结果还是不能配置。。只能看不能修改和添加。。。
-![HABmin](https://i.loli.net/2018/01/15/5a5c85fb167dd.gif)
+![HABmin](https://i.loli.net/2018/01/15/5a5c85fb167dd.gif)  
 ∑(っ °Д °;)っ
 
 # 参考资料：
