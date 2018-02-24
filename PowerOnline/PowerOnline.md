@@ -1,10 +1,10 @@
 # 电力计量——NodeMCU+Influxdb+Grafana
 主要由一下几个部分构成：
 
--**数据库：Influxdb——开源的时序数据库**
--**前端：Grafana——开源的图表展示**
--**数据采集：NodeMCU**
--**传感器:电力计量模块**
+- **数据库：Influxdb——开源的时序数据库**
+- **前端：Grafana——开源的图表展示**
+- **数据采集：NodeMCU**
+- **传感器:电力计量模块**
 
 [TOC]
 
@@ -163,5 +163,5 @@ time  　　　　　　　　　    　　　　Amp　Kwh　　Vol　　Watt　
 1、[.Net Core 2.0+ InfluxDB+Grafana+App Metrics 实现跨平台的实时性能监控](http://www.cnblogs.com/landonzeng/p/7904402.html)  
 2、[InfluxDB中文文档](https://jasper-zhang1.gitbooks.io/influxdb/content/)  
 3、[InfluxDB中文文档项目地址](https://github.com/jasper-zhang/influxdb-document-cn)  
-4、[ 数据可视化之 Grafana-Table Panel ](https://testerhome.com/topics/4550?locale=zh-CN)  
+4、[数据可视化之 Grafana-Table Panel ](https://testerhome.com/topics/4550?locale=zh-CN)  
 5、[Grafana + Zabbix --- 部署分布式监控系统](http://www.cnblogs.com/yyhh/p/4792830.html)  
