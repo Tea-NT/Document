@@ -124,10 +124,10 @@ ESP8266芯片上MQTT客户端键参考资料4，获取方法也很简单。打�
 修改代码内容为：
 
 ```C++
-#include <ESP8266MQTTClient.h>
-#include <ESP8266WiFi.h>
+ #include <ESP8266MQTTClient.h>
+ #include <ESP8266WiFi.h>
 MQTTClient mqtt;
-#define relay LED_BUILTIN//定义开发版中的LED
+ #define relay LED_BUILTIN//定义开发版中的LED
 
 void setup() {
   Serial.begin(115200);

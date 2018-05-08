@@ -9,16 +9,16 @@
 [TOC]
 
 基础技能：
--C/C++技能点，用于写开发板的程序，不过发现学了C#再来写这个没差多少。
--硬件连接，串口啦，通信啦，调试啦。不过这里不多讲这个。
+- C/C++技能点，用于写开发板的程序，不过发现学了C#再来写这个没差多少。
+- 硬件连接，串口啦，通信啦，调试啦。不过这里不多讲这个。
 
 ## InfluxDB数据库
 参考资料1中讲的比较详细，但是有一些不太清晰。到这里梳理一下。
 InfluxDB是InfluxData套件中的一个，最初是设计给做运维监控系统使用的，最初版本包含了网页端的管理页面，可以查询管理表等，在1.2.4版本以后就被剥离出来，总共分为了四个模块：
--Telegraf（被监控机器的信息获取）
--Influxdb（时序数据库）
--Chronograf（监控面板和权限管理）
--Kapacitor（即时数据流分析引擎？原文是[Kapacitor is a Real-time Streaming Data Processing Engine](https://www.influxdata.com/time-series-platform/kapacitor/)）。
+- Telegraf（被监控机器的信息获取）
+- Influxdb（时序数据库）
+- Chronograf（监控面板和权限管理）
+- Kapacitor（即时数据流分析引擎？原文是[Kapacitor is a Real-time Streaming Data Processing Engine](https://www.influxdata.com/time-series-platform/kapacitor/)）。
 
 ![Tick](https://i.loli.net/2018/01/12/5a5854f61f380.png)
 [InfluxData官网介绍](https://www.influxdata.com/time-series-platform/)

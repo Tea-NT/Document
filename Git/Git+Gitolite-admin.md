@@ -78,6 +78,10 @@ repo PowerOnline
 	RW+	=   Blus Sukxxxx
 ```
 
+> 注意git用户仍然可以通过ssh的方式输入密码登录。通过密钥登录的时候只会返回当前密钥对应用户代码库的权限。如果强行将/etc/passwd文件中git 由/usr/bin/bash改成/usr/bin/git-shell会导致git服务不可用。提示```
+fatal: unrecognized command '/home/git/gitolite/src/gitolite-shell git_admin```
+
+
 # 参考资料
 1、[Pro Git](http://iissnan.com/progit/)
 
